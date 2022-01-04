@@ -44,10 +44,12 @@ class ClientPacketType extends $pb.ProtobufEnum {
 class ServerPacketType extends $pb.ProtobufEnum {
   static const ServerPacketType PLAYERS = ServerPacketType._(0, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'PLAYERS');
   static const ServerPacketType PLAYER_DISCONNECTED = ServerPacketType._(1, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'PLAYER_DISCONNECTED');
+  static const ServerPacketType INITIALIZE = ServerPacketType._(2, const $core.bool.fromEnvironment('protobuf.omit_enum_names') ? '' : 'INITIALIZE');
 
   static const $core.List<ServerPacketType> values = <ServerPacketType> [
     PLAYERS,
     PLAYER_DISCONNECTED,
+    INITIALIZE,
   ];
 
   static final $core.Map<$core.int, ServerPacketType> _byValue = $pb.ProtobufEnum.initByValue(values);

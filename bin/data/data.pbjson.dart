@@ -37,11 +37,12 @@ const ServerPacketType$json = const {
   '2': const [
     const {'1': 'PLAYERS', '2': 0},
     const {'1': 'PLAYER_DISCONNECTED', '2': 1},
+    const {'1': 'INITIALIZE', '2': 2},
   ],
 };
 
 /// Descriptor for `ServerPacketType`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List serverPacketTypeDescriptor = $convert.base64Decode('ChBTZXJ2ZXJQYWNrZXRUeXBlEgsKB1BMQVlFUlMQABIXChNQTEFZRVJfRElTQ09OTkVDVEVEEAE=');
+final $typed_data.Uint8List serverPacketTypeDescriptor = $convert.base64Decode('ChBTZXJ2ZXJQYWNrZXRUeXBlEgsKB1BMQVlFUlMQABIXChNQTEFZRVJfRElTQ09OTkVDVEVEEAESDgoKSU5JVElBTElaRRAC');
 @$core.Deprecated('Use movementDescriptor instead')
 const Movement$json = const {
   '1': 'Movement',

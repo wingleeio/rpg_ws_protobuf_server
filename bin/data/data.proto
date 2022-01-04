@@ -41,6 +41,7 @@ enum ClientPacketType {
 enum ServerPacketType {
     PLAYERS = 0;
     PLAYER_DISCONNECTED = 1;
+    INITIALIZE = 2;
 }
 
 message ClientPacket {

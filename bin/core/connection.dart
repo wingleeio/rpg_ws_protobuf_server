@@ -24,8 +24,8 @@ void handleClient(WebSocket client) {
 
   players[id] = Player(
     id: id,
-    x: 50,
-    y: 50,
+    x: 1500,
+    y: 1500,
     speed: 150.0,
     sprite: Random().nextInt(7),
     direction: Direction.DOWN,
@@ -36,6 +36,13 @@ void handleClient(WebSocket client) {
       right: false,
     ),
   );
+
+  ServerPacket packet = ServerPacket(
+    type: ServerPacketType.INITIALIZE,
+    id: id,
+  );
+
+  send(id, packet.writeToBuffer());
 
   void handleMessage(message) {
     List<int> buffer = message.cast<int>();
@@ -80,6 +87,10 @@ void handleClient(WebSocket client) {
   });
 
   interval += 1;
+}
+
+void send(int id, List<int> data) {
+  clients[id]?.add(data);
 }
 
 void broadcast(List<int> data) {
